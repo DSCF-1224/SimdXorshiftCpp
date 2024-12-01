@@ -19,6 +19,8 @@ jobs:
               echo "g++-10 is installed"
             fi
     - name: Compile C++ Code
-      run:  g++-10 -std=gnu++20 -O0 -g -rdynamic test/IsUniformRandomBitGenerator/test.cpp
+      run:  g++-10 -std=gnu++20 -O0 -g -rdynamic test/IsUniformRandomBitGenerator/test.cpp -o test/IsUniformRandomBitGenerator/test
+    - name: Run the executable
+      run: ./test/IsUniformRandomBitGenerator/test
     - name: Checkout repository
       uses: actions/checkout@v4
