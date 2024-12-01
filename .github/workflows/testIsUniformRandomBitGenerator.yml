@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Test; IsUniformRandomBitGenerator"
-      - run: g++ --version
+      - run: g++-14 --version
       - uses: actions/checkout@v4
