@@ -6,6 +6,12 @@ jobs:
     steps:
     - name: Show what to test
       run:  echo "Test; IsUniformRandomBitGenerator"
-    - name: Setup GCC
-      run:  gcc-10 --version
+    - name: Check for g++-10
+      run:  |
+            if ! command -v g++-10 &> /dev/null; then
+              echo "g++-10 is not installed"
+              exit 1
+            else
+              echo "g++-10 is installed"
+            fi
     - uses: actions/checkout@v4
