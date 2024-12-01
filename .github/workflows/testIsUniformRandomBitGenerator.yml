@@ -14,4 +14,6 @@ jobs:
             else
               echo "g++-10 is installed"
             fi
+    - name: Compile
+      run:  g++-10 -std=gnu+20 -O0 -g -rdynamic ./test.cpp
     - uses: actions/checkout@v4
