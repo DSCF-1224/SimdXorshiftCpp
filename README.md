@@ -3,7 +3,7 @@ C++ implementation of Xorshift using SIMD (emmintrin &amp; immintrin)
 
 ## Original Implementation
 
-[Xorshift RNGs | Journal of Statistical Software][https://www.jstatsoft.org/article/view/v008i14]
+[Xorshift RNGs | Journal of Statistical Software](https://www.jstatsoft.org/article/view/v008i14)
 
 ## Reference
 
