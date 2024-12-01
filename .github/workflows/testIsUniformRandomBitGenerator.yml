@@ -4,9 +4,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run:  |
-              echo "Test; IsUniformRandomBitGenerator"
-              sudo apt update
-              sudo apt install gcc-14 g++-14
-              g++-14 --version
-      - uses: actions/checkout@v4
+    - name: Show what to test
+      run:  echo "Test; IsUniformRandomBitGenerator"
+    - name: Setup GCC
+      uses: actions/setup-gcc@v2
+      with:
+        version: '10'
+    - name: Main
+      run:  g++-14 --version
+    - uses: actions/checkout@v4
