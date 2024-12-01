@@ -7,9 +7,8 @@ jobs:
     - name: Show what to test
       run:  echo "Test; IsUniformRandomBitGenerator"
     - name: Setup GCC
-      uses: actions/setup-gcc@v2
-      with:
-        version: '10'
-    - name: Main
-      run:  g++-14 --version
+      run:  actions/setup-gcc
+            sudo apt-get update
+            sudo apt-get install gcc-14
+            gcc-14 --version
     - uses: actions/checkout@v4
