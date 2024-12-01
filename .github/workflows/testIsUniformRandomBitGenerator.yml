@@ -1,8 +1,9 @@
 name: TestIsUniformRandomBitGenerator
 on: [push, workflow_dispatch]
 jobs:
-    test:
-        runs-on: ubuntu-latest
-        steps:
-            - run: echo "Test; IsUniformRandomBitGenerator"
-            - uses: actions/checkout@v4
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Test; IsUniformRandomBitGenerator"
+      - run: g++ --version
+      - uses: actions/checkout@v4
