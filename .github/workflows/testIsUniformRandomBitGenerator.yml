@@ -4,6 +4,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        ref: develop
     - name: Show what to test
       run:  echo "Test; IsUniformRandomBitGenerator"
     - name: Check for g++-10
@@ -14,6 +18,7 @@ jobs:
             else
               echo "g++-10 is installed"
             fi
-    - name: Compile
+    - name: Compile C++ Code
       run:  g++-10 -std=gnu++20 -O0 -g -rdynamic test/IsUniformRandomBitGenerator/test.cpp
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
